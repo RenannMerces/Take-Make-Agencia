@@ -2004,9 +2004,9 @@ progress {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
+  background-color: #F9F9F9;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 2px solid #6a6767;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -2027,9 +2027,9 @@ progress {
 .form-control:focus {
   color: #212529;
   background-color: #fff;
-  border-color: #ffe480;
+  border-color: #000000 !important;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(255, 200, 0, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
 }
 .form-control::-webkit-date-and-time-value {
   height: 1.5em;
@@ -2039,8 +2039,8 @@ progress {
   opacity: 1;
 }
 .form-control::placeholder {
-  color: #6c757d;
-  opacity: 1;
+  color: #888888 !important; /* Preto absoluto */
+  opacity: 1; /* Garante que a cor seja visível */
 }
 .form-control:disabled {
   background-color: #e9ecef;
@@ -10891,6 +10891,8 @@ p {
   justify-content: center;
   padding: 0;
   border-radius: 100%;
+  background-color: #E5383B;
+  border: solid #E5383B;
 }
 
 #mainNav {
@@ -10941,18 +10943,25 @@ p {
     height: 2rem;
     transition: height 0.3s ease-in-out;
   }
+  #mainNav {
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+  }
+  
   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: #212529;
   }
+  
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
   }
+  
   #mainNav.navbar-shrink .navbar-brand svg,
   #mainNav.navbar-shrink .navbar-brand img {
     height: 1.5rem;
   }
+  
   #mainNav .navbar-nav .nav-item {
     margin-right: 1rem;
   }
@@ -11145,7 +11154,7 @@ header.masthead .masthead-heading {
   margin-left: 0;
   text-align: center;
   color: white;
-  border: 7px solid #E5383B;
+  border: 4px solid #E5383B;
   border-radius: 100%;
   background-color: #ffc800;
 }
@@ -11264,7 +11273,7 @@ header.masthead .masthead-heading {
 .team-member img {
   width: 14rem;
   height: 14rem;
-  border: 0.5rem solid rgba(0, 0, 0, 0.1);
+  border: 0.3rem #E5383B solid;
 }
 .team-member h4, .team-member .h4 {
   margin-top: 1.5rem;
@@ -11276,11 +11285,13 @@ header.masthead .masthead-heading {
 }
 
 section#contact {
-  background-color: #212529;
   background-image: url("../assets/img/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover; /* Faz a imagem cobrir toda a seção */
 }
+
+
 section#contact .section-heading {
   color: #fff;
 }
